@@ -57,21 +57,21 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(70_95%_48%/0.08),transparent_60%)]" />
-        <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-20">
+        <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
+            className="mx-auto max-w-2xl text-center"
           >
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
               <Terminal className="h-3.5 w-3.5" />
               Server backup tool
             </div>
-            <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
+            <h1 className="mb-5 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               <span className="text-foreground">Incre</span><span className="text-gradient">Vault</span>
             </h1>
-            <p className="mb-12 text-lg text-muted-foreground md:text-2xl">
+            <p className="mb-10 text-base text-muted-foreground md:text-lg">
               Backup at the server level. Restore at any level.
             </p>
 
@@ -83,8 +83,8 @@ const Index = () => {
               className="mx-auto max-w-xl"
             >
               <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">Install with a single command</p>
-              <div className="glow-border code-block flex items-center justify-between px-6 py-5">
-                <code className="font-mono text-base md:text-lg">
+              <div className="glow-border code-block flex items-center justify-between px-5 py-4">
+                <code className="font-mono text-sm md:text-base">
                   <span className="text-muted-foreground">$ </span>
                   <span className="text-primary">curl -sSL increvault.com | sh</span>
                 </code>
