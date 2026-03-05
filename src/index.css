@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
+    --background: 75 20% 4%;
     --foreground: 210 20% 90%;
 
-    --card: 220 18% 10%;
+    --card: 75 16% 8%;
     --card-foreground: 210 20% 90%;
 
-    --popover: 220 18% 10%;
+    --popover: 75 16% 8%;
     --popover-foreground: 210 20% 90%;
 
-    --primary: 142 70% 50%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 70 95% 48%;
+    --primary-foreground: 75 20% 4%;
 
-    --secondary: 220 16% 14%;
+    --secondary: 75 14% 12%;
     --secondary-foreground: 210 20% 80%;
 
-    --muted: 220 14% 16%;
-    --muted-foreground: 215 12% 50%;
+    --muted: 75 12% 14%;
+    --muted-foreground: 80 10% 50%;
 
-    --accent: 142 50% 40%;
+    --accent: 65 70% 40%;
     --accent-foreground: 210 20% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
-    --ring: 142 70% 50%;
+    --border: 75 12% 16%;
+    --input: 75 12% 16%;
+    --ring: 70 95% 48%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 220 18% 10%;
+    --sidebar-background: 75 16% 8%;
     --sidebar-foreground: 210 20% 80%;
-    --sidebar-primary: 142 70% 50%;
-    --sidebar-primary-foreground: 220 20% 7%;
-    --sidebar-accent: 220 14% 16%;
+    --sidebar-primary: 70 95% 48%;
+    --sidebar-primary-foreground: 75 20% 4%;
+    --sidebar-accent: 75 12% 14%;
     --sidebar-accent-foreground: 210 20% 90%;
-    --sidebar-border: 220 14% 18%;
-    --sidebar-ring: 142 70% 50%;
+    --sidebar-border: 75 12% 16%;
+    --sidebar-ring: 70 95% 48%;
 
     /* Custom tokens */
-    --glow-primary: 142 70% 50%;
-    --code-bg: 220 20% 12%;
-    --code-border: 220 14% 20%;
-    --gradient-hero: linear-gradient(135deg, hsl(142 70% 50% / 0.15), hsl(220 20% 7%) 60%);
-    --gradient-card: linear-gradient(180deg, hsl(220 18% 12%), hsl(220 18% 10%));
-    --shadow-glow: 0 0 40px hsl(142 70% 50% / 0.1);
+    --glow-primary: 70 95% 48%;
+    --code-bg: 75 18% 6%;
+    --code-border: 75 12% 18%;
+    --gradient-hero: linear-gradient(135deg, hsl(70 95% 48% / 0.15), hsl(75 20% 4%) 60%);
+    --gradient-card: linear-gradient(180deg, hsl(75 16% 10%), hsl(75 16% 8%));
+    --shadow-glow: 0 0 40px hsl(70 95% 48% / 0.1);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
   }
 }
@@ -74,7 +74,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(142 80% 70%));
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(65 90% 62%));
   }
 
   .glow-border {
