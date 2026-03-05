@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Zap, Lock, Database, Clock, Terminal, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Zap, Lock, Database, Clock, Terminal, ArrowRight, Copy, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import CodeBlock from "@/components/CodeBlock";
@@ -41,6 +42,14 @@ increvault backup --dry-run
 increvault status`;
 
 const Index = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("curl -sSL increvault.com | sh");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -74,10 +83,32 @@ const Index = () => {
                   <span className="text-primary">curl -sSL increvault.com | sh</span>
                 </code>
                 <button
-                  onClick={() => navigator.clipboard.writeText("curl -sSL increvault.com | sh")}
-                  className="text-xs text-muted-foreground hover:text-foreground transition-colors font-mono"
+                  onClick={handleCopy}
+                  className="relative flex h-8 w-8 items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
                 >
-                  Copy
+                  <AnimatePresence mode="wait">
+                    {copied ? (
+                      <motion.span
+                        key="check"
+                        initial={{ scale: 0, rotate: -90 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        exit={{ scale: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Check className="h-4 w-4 text-primary" />
+                      </motion.span>
+                    ) : (
+                      <motion.span
+                        key="copy"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                        transition={{ duration: 0.15 }}
+                      >
+                        <Copy className="h-4 w-4" />
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
                 </button>
               </div>
             </div>
