@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { Menu, X, Shield } from "lucide-react";
 
 const BrandName = ({ className = "" }: { className?: string }) => (
   <span className={`font-semibold tracking-tight ${className}`}>
@@ -25,7 +24,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="IncreVault logo" className="h-8 w-8 rounded-md" />
+          <Shield className="h-6 w-6 text-primary" />
           <BrandName className="text-lg" />
         </Link>
 
