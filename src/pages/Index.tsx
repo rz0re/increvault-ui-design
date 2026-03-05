@@ -56,41 +56,35 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(70_95%_48%/0.08),transparent_60%)]" />
-        <div className="container relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-16">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(142_70%_50%/0.08),transparent_60%)]" />
+        <div className="container relative py-24 md:py-36">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mx-auto max-w-2xl text-center"
+            className="mx-auto max-w-3xl text-center"
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
               <Terminal className="h-3.5 w-3.5" />
               Server backup tool
             </div>
-            <h1 className="mb-5 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
               <span className="text-foreground">Incre</span><span className="text-gradient">Vault</span>
             </h1>
-            <p className="mb-10 text-base text-muted-foreground md:text-lg">
+            <p className="mb-10 text-lg text-muted-foreground md:text-xl">
               Backup at the server level. Restore at any level.
             </p>
 
             {/* Install command */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mx-auto max-w-xl"
-            >
-              <p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">Install with a single command</p>
-              <div className="glow-border code-block flex items-center justify-between px-5 py-4">
-                <code className="font-mono text-sm md:text-base">
+            <div className="mx-auto max-w-lg">
+              <div className="code-block flex items-center justify-between px-5 py-4">
+                <code className="font-mono text-sm">
                   <span className="text-muted-foreground">$ </span>
                   <span className="text-primary">curl -sSL increvault.com | sh</span>
                 </code>
                 <button
                   onClick={handleCopy}
-                  className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
+                  className="relative flex h-8 w-8 items-center justify-center rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
                 >
                   <AnimatePresence mode="wait">
                     {copied ? (
@@ -101,7 +95,7 @@ const Index = () => {
                         exit={{ scale: 0 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <Check className="h-4.5 w-4.5 text-primary" />
+                        <Check className="h-4 w-4 text-primary" />
                       </motion.span>
                     ) : (
                       <motion.span
@@ -111,20 +105,15 @@ const Index = () => {
                         exit={{ scale: 0 }}
                         transition={{ duration: 0.15 }}
                       >
-                        <Copy className="h-4.5 w-4.5" />
+                        <Copy className="h-4 w-4" />
                       </motion.span>
                     )}
                   </AnimatePresence>
                 </button>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="mt-10 flex items-center justify-center gap-4"
-            >
+            <div className="mt-8 flex items-center justify-center gap-4">
               <Link
                 to="/docs"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:brightness-110"
@@ -140,7 +129,7 @@ const Index = () => {
               >
                 View on GitHub
               </a>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
