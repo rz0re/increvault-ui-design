@@ -60,7 +60,7 @@ const Index = () => {
               Server backup tool
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-              <span className="text-gradient">IncreVault</span>
+              <span className="text-foreground">Incre</span><span className="text-gradient">Vault</span>
             </h1>
             <p className="mb-10 text-lg text-muted-foreground md:text-xl">
               Backup at the server level. Restore at any level.

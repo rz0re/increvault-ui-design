@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Shield } from "lucide-react";
 
 const BrandName = ({ className = "" }: { className?: string }) => (
-  <span className={`font-semibold tracking-tight text-gradient ${className}`}>
-    IncreVault
+  <span className={`font-semibold tracking-tight ${className}`}>
+    <span className="text-foreground">Incre</span>
+    <span className="text-gradient">Vault</span>
   </span>
 );
 
