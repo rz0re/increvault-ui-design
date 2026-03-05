@@ -57,13 +57,13 @@ const Index = () => {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
               <Terminal className="h-3.5 w-3.5" />
-              Open-source backup tool
+              Server backup tool
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
               <span className="text-gradient">IncreVault</span>
             </h1>
             <p className="mb-10 text-lg text-muted-foreground md:text-xl">
-              Incremental, encrypted server backups — powered by Restic
+              Backup at the server level. Restore at any level.
             </p>
 
             {/* Install command */}
