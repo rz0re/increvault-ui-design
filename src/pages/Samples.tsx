@@ -45,6 +45,48 @@ const colorThemes = [
     bg: "15 15% 6%",
     card: "15 12% 10%",
   },
+  {
+    name: "Rose Pink",
+    primary: "330 80% 60%",
+    primaryLight: "338 85% 72%",
+    bg: "330 12% 6%",
+    card: "330 10% 10%",
+  },
+  {
+    name: "Lime Neon",
+    primary: "82 85% 52%",
+    primaryLight: "88 90% 65%",
+    bg: "90 15% 5%",
+    card: "90 12% 9%",
+  },
+  {
+    name: "Sky Frost",
+    primary: "195 90% 55%",
+    primaryLight: "190 95% 72%",
+    bg: "210 22% 6%",
+    card: "210 18% 10%",
+  },
+  {
+    name: "Sunset Duo",
+    primary: "25 95% 55%",
+    primaryLight: "340 80% 60%",
+    bg: "20 15% 6%",
+    card: "20 12% 10%",
+  },
+  {
+    name: "Arctic Silver",
+    primary: "220 15% 65%",
+    primaryLight: "210 20% 80%",
+    bg: "220 18% 6%",
+    card: "220 14% 10%",
+  },
+  {
+    name: "Sage Green",
+    primary: "155 40% 52%",
+    primaryLight: "150 45% 65%",
+    bg: "160 14% 6%",
+    card: "160 10% 10%",
+  },
 ];
 
 const brandStyles = [
